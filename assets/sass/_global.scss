@@ -1,0 +1,38 @@
+// Global styling for this template
+html{
+  font-size: 16px;
+  height: 100%;
+}
+body {
+  // overflow-x: hidden;
+  @include body-font;
+  min-height: 100%;
+  position: relative;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* a {
+  color: $white;
+  &:hover,
+  &:active {
+    background-color:$primary;
+  }
+} */
+
+.text-primary {
+  color: $primary !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  @include body-font;
+}
+

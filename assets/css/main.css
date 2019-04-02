@@ -1,0 +1,87 @@
+/*@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+/*@mixin serif-font {
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}*/
+/*@mixin script-font {
+  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+}*/
+/*@mixin heading-font {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}*/
+html {
+  font-size: 16px;
+  height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  position: relative; }
+
+p {
+  line-height: 1.5; }
+
+/* a {
+  color: $white;
+  &:hover,
+  &:active {
+    background-color:$primary;
+  }
+} */
+.text-primary {
+  color: #76c38f !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif; }
+
+.jim-nav-col {
+  -webkit-box-shadow: 2px 0px 3px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 2px 0px 3px 0 rgba(0, 0, 0, 0.16);
+  padding-bottom: 28px;
+  position: relative;
+  min-height: 100vh; }
+
+.menu-left {
+  min-height: 100%;
+  padding-left: 5px;
+  padding-right: 5px; }
+  .menu-left .pageLogo {
+    margin-top: 22px;
+    margin-bottom: 50px; }
+  .menu-left .nav-menu-main a {
+    padding: 5px;
+    text-align: center;
+    background: #ff0000;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 20px; }
+  .menu-left .nav-menu-main a.active {
+    background: #000;
+    color: #ff0000; }
+
+.jim-right-col-tabs {
+  padding-left: 0px;
+  padding-right: 0;
+  z-index: -1; }
+  .jim-right-col-tabs .tab-pane:first-child img {
+    width: 100%;
+    height: 100vh; }
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 599px) {
+  p {
+    line-height: 1.5 !important; } }
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
