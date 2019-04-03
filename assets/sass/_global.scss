@@ -1,6 +1,6 @@
 // Global styling for this template
 html{
-  font-size: 16px;
+  font-size: 14px;
   height: 100%;
 }
 body {
@@ -8,6 +8,7 @@ body {
   @include body-font;
   min-height: 100%;
   position: relative;
+  background-color:#fcfcfc;
 }
 
 p {
@@ -36,3 +37,13 @@ h6 {
   @include body-font;
 }
 
+@media only screen and (min-width:500px) and (max-width:991px){
+  html{
+    font-size:14px
+  }
+}
+@media only screen and (min-width:992px){
+  html{
+    font-size:16px
+  }
+}

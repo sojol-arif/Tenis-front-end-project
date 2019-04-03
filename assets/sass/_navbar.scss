@@ -1,52 +1,259 @@
 // Styling for the navbar
+.jim-form-content-join-btn{
+  @include transition-btn;
+  @include border-radius-button-jim;
+  color:$white;
+  background-color:$red-jim;
+  width: 100%;
+  margin-bottom: 30px;
+}
 .jim-nav-col{
-  box-shadow: 2px 0px 3px 0 rgba(0,0,0,0.16);
+  box-shadow: 2px 0px 5px 0 rgba(0,0,0,0.09), 4px 0px 6px 0 rgba(0,0,0,0.07);
   padding-bottom: 28px;
+
+  //show box shadow right
+  z-index: 2;
 
   //footer bottom position
   position: relative;
   min-height: 100vh;
 }
+.jim-nav-col-2{
+  min-height: 100%;
+}
+
 .menu-left{
   min-height: 100%;
   padding-left:5px;
   padding-right:5px;
   .pageLogo{
     margin-top:22px;
-    margin-bottom:50px;
+    margin-bottom:45px;
   }
   .nav-menu-main{
     a{
       padding:5px;
       text-align: center;
-      background:$red;
+      background:$red-jim;
       color:$white;
-      margin-bottom:10px;
-      -webkit-border-radius:20px;
-      -moz-border-radius:20px;
-      border-radius: 20px;
-
+      margin-bottom:15px;
+      @include border-radius-button-jim;
+      border-bottom:2px solid rgba(0,0,0, .05);
     }
     a.active{
       background: $black;
-      color:$red;
+      color:$red-jim;
     }
   }
 }
-.jim-right-col-tabs{
-  padding-left: 0px;
-  padding-right: 0;
+.menu-left.page-two{
+  position: relative;
+  .nav-menu-main{
+    a{
+      background-color:transparent;
+      text-align: left;
+      color:#020202;
+      border-bottom:0;
+      margin-bottom:0px !important;
+      font-size:13px;
+      padding:5px 0; 
+      i{
+        padding-right: 12px;
+      }
+    }
+    a.active{
+      color:$red-jim;
+    }
+  }
+}
+.jim-right-col-tabs-inner{
   z-index: -1;
+}
+.jim-right-col-tabs{
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+
   .tab-pane:first-child img{
     width:100%;
     height:100vh;
   }
+  .signInContent{
+    padding-left:30px;
+    padding-right:0px;
+    h3{
+      color:#d91e25;
+      font-weight: bold;
+    }
+    form{
+      p>a{
+        color:$red-jim;
+      }
+      input{
+        @include border-radius-button-jim;
+        margin-bottom:12px;
+        color:#020202;
+        border-color:#020202;
+        @include transition-btn;
+        background-color:#fcfcfc;
+      }
+      input::-webkit-placeholder { color: #020202; }
+      input::-moz-placeholder { color: #020202; }
+      input:hover,
+      input:focus { 
+        color: $red-jim; 
+        border-color:$red-jim;
+        box-shadow: none;
+      }
+      
+      input:focus::-webkit-input-placeholder {
+        color: $red-jim;
+      }
+      input:hover::-webkit-input-placeholder {
+        color: $red-jim;
+      }
+      input:focus::-moz-placeholder {
+        color: $red-jim;
+      }
+      input:hover::-moz-placeholder {
+        color: $red-jim;
+      }
+    }
+  }
+  .jim-col-7-right-signin-img{
+    padding-left:0;
+    padding-right:0;
+    img{
+      width: 100%;
+      height:100vh;
+    }
+  }
 }
-/* Extra small devices (phones, 600px and down) */
 
+.social-icon{
+  padding-top:10px;
+  a{
+    color:#020202;
+    border:1px solid #020202;
+    @include border-radius-social-icons;
+    line-height: 10px;
+    display: inline-block;
+    width:30px;
+    height:30px;
+    margin-right:6px;
+    text-align: center;
+    line-height: 30px;
+  }
+  a.active{
+    color:#ea2435;
+    background-color:#020202;
+  }
+}
+.page-two-heading{
+  position: relative;
+  
+}
+
+.page-two-right{
+  h3{
+    color:#f92136;
+    font-weight: bold;
+    position: relative;
+    margin-bottom:30px
+  }
+  .hr {
+    width: 74px;
+    border-style: solid;
+    border-color: #e8222f;
+    height: 0px;
+    border-top-width: 4px;
+    position: absolute;
+    bottom: -24px;
+  }
+}
+.jim-form-content-join-btn {
+  background: #ea2632;
+  margin-top:30px;
+}
+.page-two-right{
+  padding-left:25px;
+  padding-right:15px;
+}
+.singleSquat{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    background: #fff;
+    font-size: 12px;
+    padding: 3px;
+    width: 142px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+    -webkit-border-radius:3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom:10px;
+  &.active > p{
+    color:#d91b35;
+
+  }
+  img{
+    width:27px !important;
+    height:50px !important;
+    display: inline-block;
+  }
+  p{
+    margin:0;
+    line-height: 1.2 !important;
+    padding-top:12px;
+    width:66px;
+  }
+}
+
+/* Media queries */
+
+@media only screen and (max-width:767px){
+  .jim-right-col-tabs{
+    .signInContent{
+      padding-top:25px;
+      padding-left:25px;
+      padding-right:15px;
+      display: block;
+      min-height:100% !important;
+    }
+  }
+  .jim-right-col-tabs .jim-col-7-right-signin-img img {
+    width: 100%;
+    height: 100%;
+    padding-top:25px;
+  }
+}
 
 @media only screen and(min-width:481px) and (max-width: 600px) {
   // body {background: red;}
+  
+}
+
+@media only screen and(max-width: 575px) {
+  .jim-right-col-tabs{
+    .signInContent{
+      padding-left:15px;
+      padding-right:15px;
+    }
+    .singleSquat {
+      width:100px; 
+      p{
+        font-size:11px
+      }
+     }
+  }
+  .nav-footer{
+    position: relative !important;
+    padding-top: 30px;
+  }
 }
 @media only screen and(max-width: 480px) {
   // body {background: purple;}
@@ -55,9 +262,41 @@
 @media only screen and (min-width: 600px)and (max-width: 767px) {
   // body {background: green;}
 }
+@media only screen and (max-width:767px){
+  .page-two-heading{
+   margin-top:35px; 
+  }
+  .main-page-two-content{
+    padding-right: 20px;
+  }
+  .singleSquat {
+   width:120px; 
+  }
+}
 @media only screen and (min-width:599px){
   p {
     line-height: 1.5 !important;
+  }
+  .menu-left{
+    min-height: 100%;
+    padding-left:5px;
+    padding-right:5px;
+    .pageLogo{
+    }
+    .nav-menu-main{
+      a{
+       font-size:15px;
+      }
+    }
+  }
+  .jim-right-col-tabs{
+    .signInContent{
+      form{
+        input{
+          font-size:14px;
+        }
+      }
+    }
   }
 }
 

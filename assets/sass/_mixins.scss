@@ -19,6 +19,16 @@
   -o-transiton: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
+@mixin border-radius-button-jim{
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border-radius: 20px;
+}
+@mixin border-radius-social-icons{
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius: 50%;
+}
 
 // Font Mixins
 /*@mixin serif-font {
